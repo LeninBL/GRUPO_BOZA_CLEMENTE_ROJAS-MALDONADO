@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario y Tarjeta de Color</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- FORMULARIO DE VOLUMEN (Parte superior) -->
+    <div class="form-container">
+      <div class="icon-bar">
+        <i class="fas fa-cog" title="Settings"></i>
+        <i class="fas fa-bell" title="Notifications"></i>
+        <i class="fas fa-user" title="Profile"></i>
+        <i class="fas fa-question-circle" title="Help"></i>
+      </div>
+      <form id="volumeForm">
+        <div class="input-group">
+          <i class="fas fa-volume-up"></i>
+          <input type="range" id="mediaVolume" name="mediaVolume" min="0" max="100">
+        </div>
+        <div class="input-group input-icon-end">
+          <input type="range" id="alarmVolume" name="alarmVolume" min="0" max="100">
+          <i class="fas fa-clock"></i>
+        </div>
+        <div class="input-group input-icon-between">
+          <i class="fas fa-search-minus"></i>
+          <input type="range" id="iconCallback" name="iconCallback" min="0" max="100">
+          <i class="fas fa-search-plus"></i>
+        </div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="agreement" name="agreement">
+          <label for="agreement">Do you agree?</label>
+        </div>
+        <div class="button-group">
+          <button type="submit">SUBMIT</button>
+          <button type="button" id="clearBtn">CLEAR</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- TARJETA DE COLOR (Parte inferior) -->
+    <div class="color-card">
+      <div class="color-preview" id="colorPreview"></div>
+      <div class="controls">
+        <div class="control-group">
+          <label>R</label>
+          <input type="range" id="rRange" min="0" max="255" value="128">
+          <input type="number" id="rValue" min="0" max="255" value="128">
+        </div>
+        <div class="control-group">
+          <label>G</label>
+          <input type="range" id="gRange" min="0" max="255" value="128">
+          <input type="number" id="gValue" min="0" max="255" value="128">
+        </div>
+        <div class="control-group">
+          <label>B</label>
+          <input type="range" id="bRange" min="0" max="255" value="128">
+          <input type="number" id="bValue" min="0" max="255" value="128">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
